@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+  <body>
+    <script>
+      // 5
+      kid = {
+        firstName: 'Имя',
+        lastName: 'Фамилия',
+        patronymical: 'Отчество',
+        year: 2007,
+        grade: 7,
+        favoriteClasses: ['first', 'second', 'third'],
+      };
+
+      // 6
+      kid.residence = {
+        country: 'Россия',
+        city: 'Барнаул',
+        building: 104,
+        apartment: 10,
+      };
+      kid.livingPlace = {
+        country: 'Россия',
+        city: 'Кемерово',
+        building: 2,
+        apartment: 4,
+      };
+
+      // 7
+      kid.printSelf = () => {
+        console.log('kid = ' + JSON.stringify(this.kid, null, 4));
+      };
+      kid.printSelf();
+
+      // 8
+      kid.checkDate = (year) => {
+        currYear = new Date().getFullYear();
+        year <= currYear && year >= currYear - 200
+          ? (this.kid.year = year)
+          : console.log('недопустимый год');
+      };
+
+      console.log('ввод 2020\n');
+      kid.checkDate(2020);
+      kid.printSelf();
+      console.log('ввод 1000\n');
+      kid.checkDate(1000);
+
+      // 9
+      kid.studyPeriod = 9;
+      kid.nextGrade = () => {
+        if (this.kid.grade + 1 <= this.kid.studyPeriod) {
+          this.kid.grade += 1;
+        } else {
+          console.log('достигнут максимальный класс');
+        }
+      };
+
+      // 10
+      kid.printSelf();
+    </script>
+  </body>
+</html>

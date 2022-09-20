@@ -1,0 +1,33 @@
+<html>
+  <head></head>
+  <body>
+    <input type="text" id="input" />
+    <input type="submit" id="btn" />
+    <div id="output"></div>
+
+    <script>
+      btn.onclick = () => {
+        // console.log("bruh")
+        let v = parseInt(document.getElementById('input').value);
+        if (v) {
+          v % 2 == 0
+            ? (document.getElementById('output').innerHTML = factorial(v))
+            : (document.getElementById('output').innerHTML = avg(v));
+        }
+      };
+
+      const factorial = (n) => {
+        return n != 1 ? n * factorial(n - 1) : 1;
+      };
+
+      const avg = (n) => {
+        let s = 0;
+        for (let i = 1; i <= n; i++) {
+          s += i;
+        }
+        s /= n;
+        return s;
+      };
+    </script>
+  </body>
+</html>
