@@ -29,7 +29,7 @@
 
       // 7
       kid.printSelf = () => {
-        console.log('kid = ' + JSON.stringify(this.kid, null, 4));
+        console.log(JSON.stringify(this.kid, null, 4));
       };
       kid.printSelf();
 
@@ -43,7 +43,7 @@
 
       console.log('ввод 2020\n');
       kid.checkDate(2020);
-      kid.printSelf();
+      console.log(kid.year)
       console.log('ввод 1000\n');
       kid.checkDate(1000);
 
@@ -56,6 +56,10 @@
           console.log('достигнут максимальный класс');
         }
       };
+      kid.grade = 8;
+      kid.nextGrade();
+      console.log(kid.grade)
+      kid.nextGrade();
 
       // 10
       kid.printSelf();

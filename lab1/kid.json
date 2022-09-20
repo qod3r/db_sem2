@@ -1,0 +1,25 @@
+{
+  "firstName": "Имя",
+  "lastName": "Фамилия",
+  "patronymical": "Отчество",
+  "year": 2020,
+  "grade": 9,
+  "favoriteClasses": [
+      "first",
+      "second",
+      "third"
+  ],
+  "residence": {
+      "country": "Россия",
+      "city": "Барнаул",
+      "building": 104,
+      "apartment": 10
+  },
+  "livingPlace": {
+      "country": "Россия",
+      "city": "Кемерово",
+      "building": 2,
+      "apartment": 4
+  },
+  "studyPeriod": 9
+}
